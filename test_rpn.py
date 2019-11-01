@@ -16,6 +16,15 @@ class TestBasics(unittest.TestCase):
         result = rpn.calculate('3 6 *')
         self.assertEqual(18, result)
 
+    def test_division_1(self):
+        result = rpn.calculate('8 5 /')
+        self.assertEqual(1, result)
+
+    def test_division_2(self):
+        result = rpn.calculate('8 4 /')
+        self.assertEqual(2, result)
+
+
     def test_bad_input(self):
         with self.assertRaises(TypeError):
             rpn.calculate('1 2 3 +')
