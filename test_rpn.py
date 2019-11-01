@@ -12,6 +12,10 @@ class TestBasics(unittest.TestCase):
         result = rpn.calculate('3 2 -')
         self.assertEqual(1, result)
 
+    def test_multiplication(self):
+        result = rpn.calculate('3 6 *')
+        self.assertEqual(18, result)
+
     def test_bad_input(self):
         with self.assertRaises(TypeError):
             rpn.calculate('1 2 3 +')
