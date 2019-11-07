@@ -24,6 +24,10 @@ class TestBasics(unittest.TestCase):
         result = rpn.calculate('8 4 /')
         self.assertEqual(2, result)
 
+    def test_power(self):
+        result = rpn.calculate('2 3 ^')
+        self.assertEqual(8, result)
+
 
     def test_bad_input(self):
         with self.assertRaises(TypeError):
